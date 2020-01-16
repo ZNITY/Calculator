@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="icon" href="calculator.png" type="image/x-icon"/>
+    <script type="text/javascript" src="script.js">
+    </script>
+    <script src="https://kit.fontawesome.com/a6cfec0f45.js" crossorigin="anonymous"></script>
+    <style media="screen">
+
+body {
+  color:gray;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+  background-color:#222222;
+}
+.tittle{
+  text-decoration:none;
+  color:inherit;
+}
+.tittle:hover{
+  color:#c4aa38;
+}
+.opperations{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+label{
+  font-size:20px;
+  margin:30px 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100px;
+  height:100px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: gray;
+}
+label:hover {
+  background-color: #c4af53;
+  color:black;
+}
+input[type="radio"]:focus + label {
+    border-style: solid;
+    border-color: #dddddd;
+    border-width:4px;
+    font-weight:600;
+    font-size:25px;
+    background-color: #c4aa38;
+    color:black;
+}
+.inputat{
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  margin: 20px 0;
+  background: transparent;
+}
+button{
+  font-size:20px;
+  margin:30px 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100px;
+  height:100px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: gray;
+}
+button:focus {
+    outline: none;
+}
+#result{
+  font-size:50px;
+  color: #c4aa38;
+}
+
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1><a href="https://www.patreon.com/zniti" class="tittle" target="_blank">Click&nbsp  To&nbsp Support&nbsp <i class="fas fa-donate"></i></a></h1>
+
+    <input type="text" class="inputat" name="nbr1" id="nbr1" placeholder="First number"><br>
+    <input type="text" class="inputat" name="nbr2" id="nbr2" placeholder="Second number"><br>
+
+
+    <div class="opperations">
+      <div>
+    <input class="radios" type="radio" name="operation" value="+" id="add"><label for="add">
+      <i class="fas fa-plus"></i>
+    </label>
+    </div>
+    <div>
+    <input class="radios" type="radio" name="operation" value="-" id="substract"><label for="substract">
+      <i class="fas fa-minus"></i>
+    </label>
+    </div>
+    <div>
+    <input class="radios" type="radio" name="operation" value="*" id="multiply"><label for="multiply">
+      <i class="fas fa-times"></i>
+    </label>
+    </div>
+    <div>
+    <input class="radios" type="radio" name="operation" value="/" id="divide"><label for="divide">
+      <i class="fas fa-divide"></i>
+    </label>
+    </div>
+    </div>
+    <button type="button" name="button" onclick="operation()"><i class="fas fa-equals"></i></button>
+
+    <div id="result">
+
+    </div>
+
+      </center>
+
+
+
+
+  </body>
+</html>
